@@ -1,6 +1,7 @@
 <Project>
   <Import Project="dependencies.props" />
   <Import Project="..\version.props" />
+  <Import Project="..\sourcelink.props" Condition="'%(ProjectsToPack.Identity)' == $(MSBuildProjectFullPath)" />
 
   <PropertyGroup>
     <Product>Microsoft ASP.NET Core MVC</Product>
@@ -19,10 +20,5 @@
   <ItemGroup Condition="'$(TargetFrameworkIdentifier)'=='.NETFramework' AND '$(OutputType)'=='library'">
     <PackageReference Include="NETStandard.Library" Version="$(NetStandardImplicitPackageVersion)" />
   </ItemGroup>
-
-  <!--<ItemGroup>
-    <OtherProjectsToPack Include="@(ProjectsToPack)" Exclude="$(ProjectName)" />
-  </ItemGroup>
-  <Import Project="..\sourcelink.props" Condition=" @(OtherProjectsToPack) != @(ProjectsToPack) "/>-->
 
 </Project>
