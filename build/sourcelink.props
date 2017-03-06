@@ -1,6 +1,8 @@
 <Project>
 
   <PropertyGroup>
+    <!-- disable symbols packages -->
+    <IncludeSymbols>false</IncludeSymbols>
     <DebugType>embedded</DebugType>
   </PropertyGroup>
 

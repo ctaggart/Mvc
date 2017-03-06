@@ -20,4 +20,9 @@
     <PackageReference Include="NETStandard.Library" Version="$(NetStandardImplicitPackageVersion)" />
   </ItemGroup>
 
+  <!--<ItemGroup>
+    <OtherProjectsToPack Include="@(ProjectsToPack)" Exclude="$(ProjectName)" />
+  </ItemGroup>
+  <Import Project="..\sourcelink.props" Condition=" @(OtherProjectsToPack) != @(ProjectsToPack) "/>-->
+
 </Project>
