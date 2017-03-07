@@ -1,7 +1,7 @@
 <Project>
   <Import Project="dependencies.props" />
   <Import Project="..\version.props" />
-  <Import Project="..\sourcelink.props" Condition="'%(ProjectsToPack.Identity)' == $(MSBuildProjectFullPath)" />
+  <Import Project="sourcelink.props" Condition="'$PackageId' != ''" />
 
   <PropertyGroup>
     <Product>Microsoft ASP.NET Core MVC</Product>
